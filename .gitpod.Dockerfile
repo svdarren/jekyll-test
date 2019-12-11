@@ -11,4 +11,4 @@ USER gitpod
 #
 # More information: https://www.gitpod.io/docs/42_config_docker/
 RUN npm update -g
-    
+RUN gem update --system
