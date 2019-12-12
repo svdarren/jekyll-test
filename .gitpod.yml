@@ -2,11 +2,13 @@ image:
   file: .gitpod.Dockerfile
 
 # List the ports you want to expose and what to do when they are served. See https://www.gitpod.io/docs/43_config_ports/
-# ports:
+ ports:
   # - port: 8888   # default init was 3000
   #   onOpen: open-browser
   # - port: 3999
   #   onOpen: ignore
+  - port: 4000
+    onOpen: open-preview
 
 github:
   prebuilds:
@@ -34,7 +36,7 @@ tasks:
 # ruby section
   - before: cd $GITPOD_REPO_ROOT/jek-test
     init: bundle install
-    command: bundle exec jekyll start
+    command: bundle exec jekyll serve
 
 # npm section
   #- init: npm update -g && npm install netlify-cli -g && npm install netlify-lambda -g && npm install # runs during prebuild
