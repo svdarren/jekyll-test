@@ -9,14 +9,19 @@ layout: default
 
 {% for member in site.data.events.events %}
 
+**name**
 ### {{ member.name.text | escape }}
 
-<img src={{member.logo.original.url | escape }} height="100"/>
+**link**
+{{member.logo.original.url | escape}}
 
+**html formatting**
+<i>Test HTML</i>
 
-<img src=https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F83295571%2F150420679378%2F1%2Foriginal.20191203-030149?auto=compress&s=259e14f8c2502bae56836564cb42642e height="100"/>
+**html link**
 
-test
+<img src="{{member.logo.original.url | escape}}" height="100">
+This is a paragraph blah blah blah
 
 
 
